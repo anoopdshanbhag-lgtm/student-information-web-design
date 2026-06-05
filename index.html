@@ -1,38 +1,85 @@
-<h2 id="name"></h2>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information Website</title>
 
-<table>
-<tr>
-<td><b>USN</b></td>
-<td id="usn"></td>
-</tr>
+<link rel="stylesheet" href="style.css">
+</head>
 
-<tr>
-<td><b>Department</b></td>
-<td id="department"></td>
-</tr>
+<body>
 
-<tr>
-<td><b>Semester</b></td>
-<td id="semester"></td>
-</tr>
+<h1>Student Information Website</h1>
 
-<tr>
-<td><b>Date of Birth</b></td>
-<td id="dob"></td>
-</tr>
+<div class="container">
 
-<tr>
-<td><b>Phone</b></td>
-<td id="phone"></td>
-</tr>
+<div class="form-section">
 
-<tr>
-<td><b>Email</b></td>
-<td id="email"></td>
-</tr>
+<h2>Edit Student Details</h2>
 
-<tr>
-<td><b>Address</b></td>
-<td id="address"></td>
-</tr>
-</table>
+<input type="text" id="nameInput" placeholder="Student Name">
+
+<input type="text" id="usnInput" placeholder="USN">
+
+<input type="text" id="deptInput" placeholder="Department">
+
+<input type="text" id="semInput" placeholder="Semester">
+
+<input type="date" id="dobInput">
+
+<input type="text" id="phoneInput" placeholder="Phone Number">
+
+<input type="email" id="emailInput" placeholder="Email">
+
+<input type="text" id="addressInput" placeholder="Address">
+
+<input type="number" id="attendanceInput" placeholder="Attendance %">
+
+<input type="text" id="cgpaInput" placeholder="CGPA">
+
+<textarea id="achievementInput" placeholder="Achievements (comma separated)"></textarea>
+
+<button onclick="updateProfile()">
+Update Profile
+</button>
+
+</div>
+
+<div class="profile-section">
+
+<h2 id="name">Student Name</h2>
+
+<p><b>USN:</b> <span id="usn">-</span></p>
+
+<p><b>Department:</b> <span id="dept">-</span></p>
+
+<p><b>Semester:</b> <span id="sem">-</span></p>
+
+<p><b>DOB:</b> <span id="dob">-</span></p>
+
+<p><b>Phone:</b> <span id="phone">-</span></p>
+
+<p><b>Email:</b> <span id="email">-</span></p>
+
+<p><b>Address:</b> <span id="address">-</span></p>
+
+<p><b>Attendance:</b> <span id="attendance">-</span></p>
+
+<p><b>CGPA:</b> <span id="cgpa">-</span></p>
+
+<h3>Achievements</h3>
+
+<ul id="achievementList">
+</ul>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
