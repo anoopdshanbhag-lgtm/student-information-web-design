@@ -1,49 +1,55 @@
-// ===== EDIT ONLY THIS SECTION =====
+```javascript
+function updateProfile(){
 
-const student = {
-    name: "Anoop Kumar",
-    usn: "1BI25EC001",
-    department: "ECE",
-    semester: "2nd Semester",
-    dob: "15-08-2007",
-    phone: "9876543210",
-    email: "anoop@email.com",
-    address: "Bangalore, Karnataka",
-    cgpa: "8.8",
-    attendance: "93%",
+document.getElementById("name").innerText =
+document.getElementById("nameInput").value;
 
-    achievements: [
-        "Python Certification",
-        "Web Development Workshop",
-        "IoT Bootcamp",
-        "Hackathon Participant"
-    ]
-};
+document.getElementById("usn").innerText =
+document.getElementById("usnInput").value;
 
-// ===== DON'T TOUCH BELOW =====
+document.getElementById("dept").innerText =
+document.getElementById("deptInput").value;
 
-window.onload = function() {
+document.getElementById("sem").innerText =
+document.getElementById("semInput").value;
 
-    document.getElementById("name").innerText = student.name;
-    document.getElementById("usn").innerText = student.usn;
-    document.getElementById("department").innerText = student.department;
-    document.getElementById("semester").innerText = student.semester;
-    document.getElementById("dob").innerText = student.dob;
-    document.getElementById("phone").innerText = student.phone;
-    document.getElementById("email").innerText = student.email;
-    document.getElementById("address").innerText = student.address;
-    document.getElementById("cgpa").innerText = student.cgpa;
+document.getElementById("dob").innerText =
+document.getElementById("dobInput").value;
 
-    let achievementList = document.getElementById("achievementsList");
+document.getElementById("phone").innerText =
+document.getElementById("phoneInput").value;
 
-    student.achievements.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = item;
-        achievementList.appendChild(li);
-    });
-};
+document.getElementById("email").innerText =
+document.getElementById("emailInput").value;
 
-function showAttendance() {
-    document.getElementById("attendanceResult").innerHTML =
-        "Overall Attendance: " + student.attendance;
+document.getElementById("address").innerText =
+document.getElementById("addressInput").value;
+
+document.getElementById("attendance").innerText =
+document.getElementById("attendanceInput").value + "%";
+
+document.getElementById("cgpa").innerText =
+document.getElementById("cgpaInput").value;
+
+let achievements =
+document.getElementById("achievementInput")
+.value
+.split(",");
+
+let list =
+document.getElementById("achievementList");
+
+list.innerHTML = "";
+
+achievements.forEach(function(item){
+
+let li = document.createElement("li");
+
+li.textContent = item.trim();
+
+list.appendChild(li);
+
+});
+
 }
+```
